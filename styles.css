@@ -1,11 +1,19 @@
-@keyframes slide-left {
-  0% {
-    transform: translateX(100%);
+  @keyframes moveRightToLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
-  100% {
-    transform: translateX(0);
+  .moving-text {
+    overflow: hidden;
   }
-}
+  
+  .moving-text {
+    white-space: nowrap;
+    animation: moveRightToLeft 20s linear infinite;
+  } 
 
 .move-left{
 	 animation: s slide-left 3s linear;
